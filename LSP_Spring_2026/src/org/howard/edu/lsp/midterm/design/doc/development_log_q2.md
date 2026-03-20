@@ -23,7 +23,4 @@ Markdown files produced and placed in org.howard.edu.lsp.midterm.design.doc.
 ```
 
 ---
-
-Paste those in, push with commit message:
-```
-Midterm Q2 complete - evaluation.md, design.md, development_log_q2.md
+URL: https://claude.ai/chat/555dfacd-2da7-4b2d-9cb2-1a814627306b
