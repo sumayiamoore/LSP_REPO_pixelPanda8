@@ -4,50 +4,58 @@
 
 Class: Order
 Responsibilities:
-  - Store order data (orderId, items, orderType)
+  - Store order data (customerName, email, item, price)
   - Provide access to order details
 Collaborators:
   - None
 
 ---
 
-Class: OrderValidator
+Class: TaxCalculator
 Responsibilities:
-  - Validate that an order has a non-null, non-empty ID
-  - Validate that the order contains at least one item
+  - Calculate tax on an order price
+  - Calculate final total including tax
 Collaborators:
   - Order
 
 ---
 
-Class: DiscountStrategy (interface)
+Class: DiscountCalculator
 Responsibilities:
-  - Define a contract for calculating a discounted total
+  - Apply discount rules based on order price
+  - Return discounted total
 Collaborators:
-  - None
+  - Order
 
 ---
 
-Class: StandardDiscount
+Class: ReceiptPrinter
 Responsibilities:
-  - Apply no discount (regular orders)
+  - Print customer name, item, and total to console
 Collaborators:
-  - DiscountStrategy
+  - Order
 
 ---
 
-Class: PriorityDiscount
+Class: OrderFileWriter
 Responsibilities:
-  - Apply a 10% discount to the order total
+  - Save order details to a file
 Collaborators:
-  - DiscountStrategy
+  - Order
+
+---
+
+Class: EmailService
+Responsibilities:
+  - Send confirmation email to customer
+Collaborators:
+  - Order
 
 ---
 
 Class: OrderLogger
 Responsibilities:
-  - Log when an order has been processed
-  - Record the time stamp of processing
+  - Log the timestamp when an order is processed
 Collaborators:
   - None
 
@@ -55,12 +63,21 @@ Collaborators:
 
 Class: OrderProcessor
 Responsibilities:
-  - Coordinate the processing of an order
-  - Delegate validation to OrderValidator
-  - Delegate discount calculation to DiscountStrategy
+  - Coordinate the full order processing workflow
+  - Delegate tax calculation to TaxCalculator
+  - Delegate discount to DiscountCalculator
+  - Delegate receipt printing to ReceiptPrinter
+  - Delegate file saving to OrderFileWriter
+  - Delegate email confirmation to EmailService
   - Delegate logging to OrderLogger
 Collaborators:
   - Order
-  - OrderValidator
-  - DiscountStrategy
+  - TaxCalculator
+  - DiscountCalculator
+  - ReceiptPrinter
+  - OrderFileWriter
+  - EmailService
   - OrderLogger
+```
+
+---
