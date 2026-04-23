@@ -1,0 +1,6 @@
+In this Large Scale Programming course, my view of AI changed a lot. At the start, I didn’t think AI would be accepted or used as much as it is, especially in a technical space like this. But throughout the class, I saw how it can actually support coding, debugging, and understanding concepts when used correctly. It went from feeling like something questionable to something that’s clearly becoming part of how developers work.
+
+I also learned more about the ethics of using AI in programming. In this class, it became clear that AI should be a tool to help you learn and think through problems, not something you rely on to do the work for you or take credit from. Writing and understanding your own code still matters. Now I see AI as something that’s part of the workflow in programming, but it’s on us to use it responsibly and make sure we’re still building our own skills.
+
+Going forward, I plan to use AI as a tool to support my learning, not replace it. I’ll use it to help explain concepts, check my thinking, and guide me when I’m stuck, but I still want to write and understand my own code. This class helped me realize that using AI responsibly means using it to build your skills, not depend on it or take credit for its work.
+
