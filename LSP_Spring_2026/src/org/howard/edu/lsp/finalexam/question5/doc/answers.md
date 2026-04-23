@@ -14,4 +14,5 @@ Heuristic 3:
 
 Name: Keep related data and behavior together.
 
-Explanation: Data and the methods that operate on it should live in the same class. Scattering state across multiple classes forces callers to manage it externally, increases coupling, and makes the codebase harder to follow and debug.
+Explanation: Data and the methods that operate on it should live in the same class. Scattering state across multiple classes forces callers to manage it externally, increases coupling, and makes the code base harder to follow and debug.
+
